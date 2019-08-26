@@ -1,3 +1,6 @@
 [submodule "pack/plugins/start/command-t"]
 	path = pack/plugins/start/command-t
 	url = https://github.com/wincent/command-t.git
+[submodule "pack/plugins/start/lightline"]
+	path = pack/plugins/start/lightline
+	url = https://github.com/itchyny/lightline.vim

@@ -31,6 +31,10 @@ set autoindent
 " highlight words when searching
 set hlsearch
 
+" lightline setting
+set laststatus=2
+set noshowmode
+
 " command-t settings
 let g:CommandTCancelMap=['<ESC>', '<C-c>']
 
@@ -39,3 +43,5 @@ nnoremap <Leader><Leader> :e#<CR>
 
 " shortcut to reindex command-t
 noremap <Leader>r :CommandTFlush<CR>
+
+
