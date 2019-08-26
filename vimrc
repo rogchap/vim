@@ -1,10 +1,12 @@
 " basic setings
-filetype on
+filetype plugin indent on
 syntax on
 colorscheme monokai
 set termguicolors
 set colorcolumn=120
 set backspace=indent,eol,start
+set encoding=utf-8
+set fileencoding=utf-8
 
 " show line numbers
 set number
@@ -20,7 +22,6 @@ set hidden
 set history=100
 
 " smarter indenting
-filetype indent on
 set nowrap
 set tabstop=2
 set shiftwidth=2
@@ -38,10 +39,18 @@ set noshowmode
 " command-t settings
 let g:CommandTCancelMap=['<ESC>', '<C-c>']
 
+" vim-go settings
+let g:go_fmt_command = "goimports"
+let g:go_auto_type_info = 1
+
+" onmicomplete settings
+set completeopt=menuone,noinsert
+
 " shortcut to open the previous file 
 nnoremap <Leader><Leader> :e#<CR>
-
 " shortcut to reindex command-t
-noremap <Leader>r :CommandTFlush<CR>
+nnoremap <Leader>r :CommandTFlush<CR>
 
-
+" shortcut to bring up omnicomplete
+imap <C-@> <C-Space>
+imap <C-Space> <C-x><C-o>
