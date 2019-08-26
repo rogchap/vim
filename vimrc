@@ -46,6 +46,9 @@ let g:go_auto_type_info = 1
 " onmicomplete settings
 set completeopt=menuone,noinsert
 
+" YouCompleteMe settings
+let g:ycm_key_list_stop_completion = [ '<C-y>', '<Enter>' ]
+
 " shortcut to open the previous file 
 nnoremap <Leader><Leader> :e#<CR>
 " shortcut to reindex command-t
