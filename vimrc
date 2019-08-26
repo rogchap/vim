@@ -42,6 +42,7 @@ let g:CommandTCancelMap=['<ESC>', '<C-c>']
 " vim-go settings
 let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 1
+let g:go_metalinter_command='golangci-lint'
 
 " onmicomplete settings
 set completeopt=menuone,noinsert
