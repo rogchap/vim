@@ -7,12 +7,14 @@ set colorcolumn=120
 set backspace=indent,eol,start
 set encoding=utf-8
 set fileencoding=utf-8
+set exrc
+set secure
 
 " show line numbers
 set number
 
 " show matching parenthesis
-set showmatch
+set showmatch 
 
 " change the leader key to space
 let mapleader=" "
@@ -23,8 +25,8 @@ set history=100
 
 " smarter indenting
 set nowrap
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set smartindent
 set autoindent
@@ -38,23 +40,29 @@ set noshowmode
 
 " command-t settings
 let g:CommandTCancelMap=['<ESC>', '<C-c>']
+" shortcut to reindex command-t
+nnoremap <Leader>r :CommandTFlush<CR>
+" arrow keys for command-t
+nmap <esc>OA <Up>
+nmap <esc>OB <Down>
+nmap <esc>OC <Right>
+nmap <esc>OD <Left>
 
 " vim-go settings
 let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 1
 let g:go_metalinter_command='golangci-lint'
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
 " onmicomplete settings
 set completeopt=menuone,noinsert
+" shortcut to bring up omnicomplete
+imap <C-@> <C-Space>
+imap <C-Space> <C-x><C-o>
 
 " YouCompleteMe settings
 let g:ycm_key_list_stop_completion = [ '<C-y>', '<Enter>' ]
 
 " shortcut to open the previous file 
 nnoremap <Leader><Leader> :e#<CR>
-" shortcut to reindex command-t
-nnoremap <Leader>r :CommandTFlush<CR>
-
-" shortcut to bring up omnicomplete
-imap <C-@> <C-Space>
-imap <C-Space> <C-x><C-o>
