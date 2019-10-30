@@ -2,11 +2,14 @@
 download_plugins:
 	git submodule update --init --recursive --jobs 8
 
-install-command-t:
-	cd pack/plugins/start/command-t && rake make
+install-fzf:
+	brew install fzf
 
-install-you-complete-me:
-	cd pack/plugins/start/YouCompleteMe && python3 install.py --all
+install-pynvim:
+	pip3 install pynvim
 
-install: download_plugins install-command-t install-you-complete-me
+install-ag:
+	brew install the_silver_searcher
+
+install: download_plugins install-pynvim install-fzf install-ag
 

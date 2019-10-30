@@ -9,6 +9,10 @@ set encoding=utf-8
 set fileencoding=utf-8
 set exrc
 set secure
+set undodir=~/.vim/undodir
+set undofile
+set clipboard+=unnamed
+set pyxversion=3
 
 " show line numbers
 set number
@@ -39,14 +43,20 @@ set laststatus=2
 set noshowmode
 
 " command-t settings
-let g:CommandTCancelMap=['<ESC>', '<C-c>']
+"let g:CommandTCancelMap=['<ESC>', '<C-c>']
 " shortcut to reindex command-t
-nnoremap <Leader>r :CommandTFlush<CR>
+"nnoremap <Leader>r :CommandTFlush<CR>
 " arrow keys for command-t
-nmap <esc>OA <Up>
-nmap <esc>OB <Down>
-nmap <esc>OC <Right>
-nmap <esc>OD <Left>
+"nmap <esc>OA <Up>
+"nmap <esc>OB <Down>
+"nmap <esc>OC <Right>
+"nmap <esc>OD <Left>
+
+set rtp+=/usr/local/opt/fzf
+nnoremap <Leader>t :FZF<CR>
+
+let g:ackprg = 'ag --vimgrep'
+nnoremap <Leader>f :Ag!<CR>
 
 " vim-go settings
 let g:go_fmt_command = "goimports"
@@ -60,9 +70,7 @@ set completeopt=menuone,noinsert
 " shortcut to bring up omnicomplete
 imap <C-@> <C-Space>
 imap <C-Space> <C-x><C-o>
-
-" YouCompleteMe settings
-let g:ycm_key_list_stop_completion = [ '<C-y>', '<Enter>' ]
+let g:deoplete#enable_at_startup = 1
 
 " shortcut to open the previous file 
 nnoremap <Leader><Leader> :e#<CR>
