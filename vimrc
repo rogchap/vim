@@ -54,9 +54,25 @@ set noshowmode
 
 set rtp+=/usr/local/opt/fzf
 nnoremap <Leader>t :FZF<CR>
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
 
 let g:ackprg = 'ag --vimgrep'
-nnoremap <Leader>f :Ag!<CR>
+nnoremap <Leader>f :Ag<CR>
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview({ 'options': ['--color', 'hl:141,hl+:197'] },'right:50%', '?'), <bang>0)
 
 " vim-go settings
 let g:go_fmt_command = "goimports"
