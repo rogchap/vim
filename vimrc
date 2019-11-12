@@ -1,3 +1,4 @@
+" B
 " basic setings
 filetype plugin indent on
 syntax on
@@ -42,6 +43,11 @@ set hlsearch
 set laststatus=2
 set noshowmode
 
+" escape search highlight
+nnoremap <esc> :noh<return><esc>
+" needed so that vim still understands escape sequences
+nnoremap <esc>^[ <esc>^[
+
 " command-t settings
 "let g:CommandTCancelMap=['<ESC>', '<C-c>']
 " shortcut to reindex command-t
@@ -72,7 +78,7 @@ let g:fzf_colors =
 let g:ackprg = 'ag --vimgrep'
 nnoremap <Leader>f :Ag<CR>
 command! -bang -nargs=* Ag
-  \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview({ 'options': ['--color', 'hl:141,hl+:197'] },'right:50%', '?'), <bang>0)
+  \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview({ 'options': ['--color', 'hl:243,hl+:197'] },'right:50%', '?'), <bang>0)
 
 " vim-go settings
 let g:go_fmt_command = "goimports"
