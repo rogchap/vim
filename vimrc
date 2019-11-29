@@ -1,4 +1,3 @@
-" B
 " basic setings
 filetype plugin indent on
 syntax on
@@ -48,16 +47,6 @@ nnoremap <esc> :noh<return><esc>
 " needed so that vim still understands escape sequences
 nnoremap <esc>^[ <esc>^[
 
-" command-t settings
-"let g:CommandTCancelMap=['<ESC>', '<C-c>']
-" shortcut to reindex command-t
-"nnoremap <Leader>r :CommandTFlush<CR>
-" arrow keys for command-t
-"nmap <esc>OA <Up>
-"nmap <esc>OB <Down>
-"nmap <esc>OC <Right>
-"nmap <esc>OD <Left>
-
 set rtp+=/usr/local/opt/fzf
 nnoremap <Leader>t :FZF<CR>
 let g:fzf_colors =
@@ -75,6 +64,7 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 let g:ackprg = 'ag --vimgrep'
 nnoremap <Leader>f :Ag<CR>
 command! -bang -nargs=* Ag
@@ -86,6 +76,12 @@ let g:go_auto_type_info = 1
 let g:go_metalinter_command='golangci-lint'
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
+let g:go_gopls_complete_unimported = 1
+let g:go_gopls_use_placeholders = 1
+let g:go_template_autocreate = 0
+let g:go_template_use_pkg = 1
+let g:go_decls_mode = 'fzf'
+nnoremap <Leader><CR> :GoDef<CR>
 
 " onmicomplete settings
 set completeopt=menuone,noinsert
