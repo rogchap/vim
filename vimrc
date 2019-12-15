@@ -92,5 +92,10 @@ imap <C-@> <C-Space>
 imap <C-Space> <C-x><C-o>
 let g:deoplete#enable_at_startup = 1
 
+" Set ultisnips triggers
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
 " shortcut to open the previous file 
 nnoremap <Leader><Leader> :e#<CR>
