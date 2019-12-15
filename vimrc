@@ -13,6 +13,7 @@ set undodir=~/.vim/undodir
 set undofile
 set clipboard+=unnamed
 set pyxversion=3
+set autowrite
 
 " show line numbers
 set number
@@ -82,6 +83,7 @@ let g:go_template_autocreate = 0
 let g:go_template_use_pkg = 1
 let g:go_decls_mode = 'fzf'
 nnoremap <Leader><CR> :GoDef<CR>
+autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 
 " onmicomplete settings
 set completeopt=menuone,noinsert
