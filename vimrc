@@ -1,7 +1,7 @@
 " basic setings
 filetype plugin indent on
 syntax on
-colorscheme monokai
+colorscheme nord
 set termguicolors
 set colorcolumn=120
 set backspace=indent,eol,start
@@ -14,7 +14,10 @@ set undofile
 set clipboard+=unnamed
 set pyxversion=3
 set autowrite
+set cursorline
 
+" theme styling
+let g:nord_cursor_line_number_background = 1
 " show line numbers
 set number
 augroup numbertoggle
@@ -47,6 +50,7 @@ set hlsearch
 " lightline setting
 set laststatus=2
 set noshowmode
+let g:lightline = { 'colorscheme': 'nord' }
 
 " escape search highlight
 nnoremap <esc> :noh<return><esc>
