@@ -108,3 +108,14 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " shortcut to open the previous file 
 nnoremap <Leader><Leader> :e#<CR>
+
+" disable arrow keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
