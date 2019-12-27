@@ -1,7 +1,6 @@
 " basic setings
 filetype plugin indent on
 syntax on
-colorscheme nord
 set termguicolors
 set colorcolumn=120
 set backspace=indent,eol,start
@@ -15,9 +14,8 @@ set clipboard+=unnamed
 set pyxversion=3
 set autowrite
 set cursorline
+set ttimeoutlen=0
 
-" theme styling
-let g:nord_cursor_line_number_background = 1
 " show line numbers
 set number
 augroup numbertoggle
@@ -25,6 +23,10 @@ augroup numbertoggle
   autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
   autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
 augroup END
+
+" theme styling
+let g:nord_cursor_line_number_background = 1
+colorscheme nord
 
 " show matching parenthesis
 set showmatch 
