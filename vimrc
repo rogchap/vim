@@ -88,6 +88,7 @@ let g:go_template_autocreate = 0
 let g:go_template_use_pkg = 1
 let g:go_decls_mode = 'fzf'
 nnoremap <Leader><CR> :GoDef<CR>
+nnoremap <Leader>a :GoAlternate<CR>
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 
 " onmicomplete settings
