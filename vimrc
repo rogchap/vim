@@ -15,6 +15,7 @@ set pyxversion=3
 set autowrite
 set cursorline
 set ttimeoutlen=0
+set showcmd
 
 " show line numbers
 set number
