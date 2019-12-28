@@ -1,7 +1,6 @@
 " basic setings
 filetype plugin indent on
 syntax on
-set termguicolors
 set colorcolumn=120
 set backspace=indent,eol,start
 set encoding=utf-8
@@ -15,6 +14,15 @@ set pyxversion=3
 set autowrite
 set cursorline
 set ttimeoutlen=0
+set showcmd
+set cmdheight=2
+
+" true colors
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 
 " show line numbers
 set number

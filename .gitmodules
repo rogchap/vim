@@ -34,3 +34,6 @@
 [submodule "pack/plugins/start/nord-vim"]
 	path = pack/plugins/start/nord-vim
 	url = git@github.com:arcticicestudio/nord-vim.git
+[submodule "pack/plugins/start/vim-tmux-navigator"]
+	path = pack/plugins/start/vim-tmux-navigator
+	url = git@github.com:christoomey/vim-tmux-navigator.git
